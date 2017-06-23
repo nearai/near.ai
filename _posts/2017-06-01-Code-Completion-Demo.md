@@ -37,7 +37,7 @@ Sequence to sequence models
  
 Sequence to Sequence (Seq2Seq for short) has been a ground-breaking architecture in Deep Learning. Originally published by <a href=https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf>Sutskever, Vinyals and Le</a>, this family of models achieved state-of-the-art results in Machine Translation, Parsing, Summarization, Text to Speech and other applications.
  
-Generally Seq2Seq is an extension of regular Recurrent Neural Networks (we have mentioned them before in <a href=http://codeforces.com/blog/entry/52305>http://codeforces.com/blog/entry/52305</a>), where model first encodes input tokens and then tries to produce set of output tokens by decoding on token at a time.
+Generally Seq2Seq is an extension of regular Recurrent Neural Networks (we have mentioned them before in <a href=http://near.ai/2017/05/31/NPI.html>http://near.ai/2017/05/31/NPI.html</a>), where model first encodes input tokens and then tries to produce set of output tokens by decoding on token at a time.
  
 ![Seq2Seq](http://i.imgur.com/J8qpMlF.png "Seq2Seq")
  
