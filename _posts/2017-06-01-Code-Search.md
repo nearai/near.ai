@@ -15,7 +15,9 @@ We can embed the implementations of functions using neural network pre-trained o
 Then at retrieval time we going to lookup tokens in regular index and encode text using the other part of neural network.
 Finding nearest neighbors in the encoded code space, can augment regular search techniques with additional "semantic" meaning.
 
-We have a [quick demo of such functionality available here](https://www.youtube.com/watch?v=8XSf6XfYl64)
+We have a quick demo of such functionality available here:
+
+[![Code Search Demo](https://img.youtube.com/vi/8XSf6XfYl64/0.jpg)](https://www.youtube.com/watch?v=8XSf6XfYl64)
 
 Let us know if you have any comments at `contact@near.ai`.
 
