@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Code Search
+excerpt_separator: <!--more-->
 ---
 
 Recently we have been exploring applications of code understanding technology we been building. One option that comes naturally in mind is code search.
@@ -19,4 +20,6 @@ We have a quick demo of such functionality available here:
 [![Code Search Demo](https://img.youtube.com/vi/8XSf6XfYl64/0.jpg)](https://www.youtube.com/watch?v=8XSf6XfYl64)
 
 Let us know if you have any comments at `contact@near.ai`.
+
+<!--more-->
 
