@@ -4,7 +4,7 @@ title: Code Search
 excerpt_separator: <!--more-->
 ---
 
-Recently we have been exploring applications of code understanding technology we been building. One option that comes naturally in mind is code search.
+Recently we have been exploring applications of code understanding technology we are building. Code search as an applicaiton naturally comes to mind.
 
 Been developers ourselves, we use code search everyday for various types of questions. The span of questions ranges from asking for definition of specific function or API, looking up implementation of some functionality to a description of what we want to do.
 Currently one would use Google, StackOverflow and Github for all of these. Going from one website to another,
