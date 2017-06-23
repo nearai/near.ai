@@ -16,7 +16,7 @@ Notice how early on the model nearly perfectly predicts all the tokens, which is
 
 There are several interesting moments in the video. First, note how after `int n = ` it predicts `sc`, understanding that `n` will probably be read from the scanner (and while not shown in the video, if the scanner name was `in`, the model would have properly predicted `in` after `int n = `), however when the line starts with `int ans = `, it then properly predicts `0`, since `ans` is rarely read from the input.
  
-The second interesting moment is what happens when we are printing the answer. At first when the line contains `System.out.println(ans` it predicts a semicolon (mistakenly) and the closing parenthesis as possible next tokens, but not ` - 1`, however when we introduce the second parenthesis `System.out.println((ans`, it then properly predicts `-1`, closing parenthesis, and the division by two.
+The second interesting moment is what happens when we are printing the answer. At first when the line contains `System.out.println(ans` it predicts a semicolon (mistakenly) and the closing parenthesis as possible next tokens, but not ` - 1`, however when we introduce the second parenthesis `System.out.println((ans`, it then properly predicts -1, closing parenthesis, and the division by two.
  
 You can also notice a noticeable pause before the `for` loop is written. This is due to the fact that using such artificial intelligence suggestions completely turns off the natural intelligence the operator of the machine possesses :)
  
