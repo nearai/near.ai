@@ -26,7 +26,7 @@ One concern with such autocomplete is that in the majority of cases most of the 
  
 Here there are more rough edges, but notice how early on the model can correctly predict entire lines of code.
  
-Currently we do not condition the predictions on the task. Partially because number of tasks available on the Internet is too small for a machine learning model to predict anything reasonable (so, please help us fix it by participating here: <a href=https://r-nn.com>https://r-nn.com</a>). Once we have a working model that is conditioned on the statement, we expect it to be able to predict variable names, snippets to read and write data and computing some basic logic.
+Currently we do not condition the predictions on the task. Partially because number of tasks available on the Internet is too small for a machine learning model to predict anything reasonable (so, please help us fix it by participating here: [https://r-nn.com](https://r-nn.com)). Once we have a working model that is conditioned on the statement, we expect it to be able to predict variable names, snippets to read and write data and computing some basic logic.
  
 Let’s review Seq2Seq models in the next section.
 
