@@ -16,13 +16,13 @@ path: "/careers"
   <div class="container">
     <h3>Research Scientist</h3>
     <p class="lead text-muted">The candidate will be joining our research team and work on the core technology of machines capable of coding.</p>
-    <p class="lead text-muted">The candidate needs to have expertise in deep learning, particularly recurrent and recursive neural networks, and be proficient with one of the modern frameworks, preferably TensorFlow.</p>
+    <p class="lead text-muted">The candidate needs to have expertise in deep learning, particularly recurrent and recursive neural networks, and be proficient with one of the modern frameworks, PyTorch or TensorFlow.</p>
     <p class="lead text-muted">Experience with Reinforcement Learning or advanced search techniques is a huge plus.</p>
     <p class="lead text-muted">Most importantly, the candidate has to believe that machines will code in a very foreseable future.</p>
     <h3>Software Engineer</h3>
     <p class="lead text-muted">The candidate will be joining the core team to work on taking coding machines research into production.</p>
     <p class="lead text-muted">The candidate needs to have expertise in full-stack development, particular technologies do not matter.</p>
-    <p class="lead text-muted">Experience with deep learning framworks in a huge plus.</p>
+    <p class="lead text-muted">Experience in machine learning is a huge plus.</p>
     <p class="lead text-muted">Most importantly, the candidate has to believe that machines will code in a very foreseable future.</p>
   </div>
 </section>

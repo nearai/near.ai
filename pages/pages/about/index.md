@@ -16,7 +16,7 @@ path: "/about"
     <p class="lead text-muted">Imagine how much faster can cancer research go, if the domain experts instead of having meetings with engineers could just directly ask computer to analyze required data streams.
     Businesses won't need to wait for a crucial feature in the third-party SaaS while doing something manually.
     In the future they will be able to quickly build their own solution tailored to their needs.</p>
-    <p class="lead text-muted">"Software is eating the world" said Marc Andreessen, and we on the mission to give the power of this transformation to everyone.</p>
+    <p class="lead text-muted">"Software is eating the world" said Marc Andreessen, and we are on the mission to give the power of this transformation to everyone.</p>
   </div>
 
   <div class="container">
