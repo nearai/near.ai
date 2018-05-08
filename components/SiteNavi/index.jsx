@@ -19,6 +19,9 @@ class SiteNavi extends React.Component {
               <li className={location.pathname === prefixLink('/') ? 'nav-item active' : 'nav-item'}>
                 <Link to={prefixLink('/')} className="nav-link">Home</Link>
               </li>
+              <li className={location.pathname === prefixLink('/publications/') ? 'nav-item active' : 'nav-item'}>
+                <Link to={prefixLink('/publications/')} className="nav-link">Publications</Link>
+              </li>
               <li className={location.pathname === prefixLink('/about/') ? 'nav-item active' : 'nav-item'}>
                 <Link to={prefixLink('/about/')} className="nav-link">About</Link>
               </li>
