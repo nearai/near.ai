@@ -40,9 +40,11 @@ class SiteIndex extends React.Component {
                     <h1>Design and build a mobile app from scratch with NEAR.</h1>
                     <p>No experience required.</p>
 
-                    <p><img src="1.svg" /> Upload your sketches, which will be rendered into designs</p>
-                    <p><img src="2.svg" /> Use simple language to describe what you want to build, our platform will handle the rest</p>
-                    <p><img src="3.svg" /> Launch a fully functioning mobile app using our proprietary technology</p>
+                    <table cellSpacing="0" cellPadding="0"><tbody>
+                            <tr><td><img src="1.svg" /></td><td><p> Upload your sketches, which will be rendered into designs</p></td></tr>
+                            <tr><td><img src="2.svg" /></td><td><p> Use simple language to describe what you want to build, our platform will handle the rest</p></td></tr>
+                            <tr><td><img src="3.svg" /></td><td><p> Launch a fully functioning mobile app using our proprietary technology</p></td></tr>
+                    </tbody></table>
 
                         <form action="" method="post" id="" name="" className="validate" noValidate onSubmit={(event) => { this.onFormSubmit(event) }}>
                         <div>
