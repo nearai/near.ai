@@ -15,9 +15,9 @@ class SiteNavi extends React.Component {
         <div className="container">
           <Link className="text-center" to={prefixLink('/')}><h1 className="navbar-brand mb-0">{title}</h1></Link>
           <div className="navbar-collapse collapse" id="navbarColor02" aria-expanded="false">
-            <ul className="navbar-nav mr-auto">
-              <li className={location.pathname === prefixLink('/') ? 'nav-item active' : 'nav-item'}>
-                <Link to={prefixLink('/')} className="nav-link">Home</Link>
+            <ul className="navbar-nav ml-auto">
+              <li className={location.pathname === prefixLink('/blog/') ? 'nav-item active' : 'nav-item'}>
+                <Link to={prefixLink('/blog/')} className="nav-link">Blog</Link>
               </li>
               <li className={location.pathname === prefixLink('/publications/') ? 'nav-item active' : 'nav-item'}>
                 <Link to={prefixLink('/publications/')} className="nav-link">Publications</Link>

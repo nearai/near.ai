@@ -6,81 +6,43 @@ import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import access from 'safe-access'
 import { config } from 'config'
+import LandingPopup from '../components/LandingPopup'
+
 
 class SiteIndex extends React.Component {
-
-    more(body, path) {
-        if (body.match("<!--more-->")) {
-            return <Link className='readmore' to={ prefixLink(path) }><span className="btn btn-outline-primary btn-block">MORE</span></Link>
-        }
-        return
+    constructor(props) {
+        super(props)
+        this.state = {showPopup: false}
     }
-
-    description(body) {
-        var test = body.replace(/<blockquote>/g, '<blockquote class="blockquote">')
-        if (test.match("<!--more-->")) {
-            test = test.split("<!--more-->")
-            if (typeof test[0] != "undefined") {
-                return test[0]
-            }
-        }
-        return test
+    onFormSubmit(event) {
+        this.setState({showPopup: true})
+        event.preventDefault()
     }
-
     render() {
-        const pageLinks = []
-
-        // Sort pages.
-        const sortedPages = sortBy(this.props.route.pages, (page) => access(page, 'data.date')
-        ).reverse()
-        sortedPages.forEach((page) => {
-            if (access(page, 'file.ext') === 'md' && access(page, 'data.layout') === 'post') {
-                const title = access(page, 'data.title') || page.path
-                const description = access(page, 'data.description') || access(page, 'data.body')
-                const datePublished = access(page, 'data.date')
-                const categories = access(page, 'data.categories')
-
-                const category = []
-                for (const i in categories) {
-                    const c = categories[i]
-                    category.push(
-                         <span className="badge badge-primary" key={i}>{ c }</span>
-                    )
-                }
-
-
-                const data = {}
-
-                pageLinks.push(
-                    <div className='article-wrap' key={page.path}>
-                      <div className="page-header">
-                        <Link style={ { textDecoration: 'none',} } to={ prefixLink(page.path) } >
-                          <h1>{ title }</h1>
-                          <time dateTime={ moment(datePublished).format('MMMM D, YYYY') }>
-                            { moment(datePublished).format('YYYY/MM/DD') }
-                          </time>
-                        </Link>
-                        { category }
-                      </div>
-                      <div className="page-content" dangerouslySetInnerHTML={ { __html: this.description(description) } } />
-                      { this.more(description, page.path) }
-                    </div>
-                )
-            }
-        })
-
         return (
             <DocumentTitle title={ config.siteTitle }>
-             <div className='container'>
-                <section className="text-center">
-                    <h1 className="section-heading">Teaching Machines to Code</h1>
-                    <hr className='primary'/>
-                    <p className='lead text-muted'>Applying recent advances in Artificial Intelligence to synthesize programs from descriptions.</p>
-                </section>
-                <div className='articles col-md-12'>
-                  { pageLinks }
+            <div id="landing">
+                <div id="text">
+                    <h1>Design and build a mobile app from scratch with Mobility.</h1>
+                    <p>No experience required.</p>
+
+                    <p><img src="1.svg" /> Upload your sketches, which will be rendered into designs</p>
+                    <p><img src="2.svg" /> Use simple language to describe what you want to build, our platform will handle the rest</p>
+                    <p><img src="3.svg" /> Launch a fully functioning mobile app using our proprietary technology</p>
+
+                        <form action="" method="post" id="" name="" className="validate" noValidate onSubmit={(event) => { this.onFormSubmit(event) }}>
+                        <div>
+                            <label htmlFor="mce-EMAIL">Get early access</label><br />
+                            <input type="email" value="" name="EMAIL" className="email" placeholder="email address" required />
+                            <input type="submit" value="Submit" name="Submit" id="subscribe" className="button" />
+                        </div>
+                    </form>
                 </div>
-              </div>
+                <div id="app">
+                    <img src="mobile_app.svg" />
+                </div>
+                {this.state.showPopup && <LandingPopup />}
+            </div>
             </DocumentTitle>
         )
     }
