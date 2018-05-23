@@ -37,7 +37,7 @@ class SiteIndex extends React.Component {
             <DocumentTitle title={ config.siteTitle }>
             <div id="landing">
                 <div id="text">
-                    <h1>Design and build a mobile app from scratch with Mobility.</h1>
+                    <h1>Design and build a mobile app from scratch with NEAR.</h1>
                     <p>No experience required.</p>
 
                     <p><img src="1.svg" /> Upload your sketches, which will be rendered into designs</p>

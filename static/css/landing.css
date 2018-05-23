@@ -25,8 +25,10 @@ body, label, input {
   margin-right: 10px;
 }
 
-#landing p {
-  height: 50px;
+@media screen and (min-width: 910px) {
+  #landing p {
+    height: 50px;
+  }
 }
 
 #app img {
