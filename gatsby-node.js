@@ -4,6 +4,7 @@ var cssnext = require("postcss-cssnext")
 
 exports.modifyWebpackConfig = function(config, env) {
     config.merge({
+        target: 'web',
         postcss: [
             lost(),
             rucksack(),
