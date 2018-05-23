@@ -32,6 +32,9 @@ class SiteIndex extends React.Component {
             this.setState({ showPopup: false, user_id: -1, email: "", showThank: true})
         })
     }
+    onPopupClose = () => {
+        this.setState({ showPopup: false })
+    }
     render() {
         return (
             <DocumentTitle title={ config.siteTitle }>
@@ -57,7 +60,7 @@ class SiteIndex extends React.Component {
                 <div id="app">
                     <img src="mobile_app.svg" />
                 </div>
-                {this.state.showPopup && <LandingPopup onClick={(text) => this.onPopupClick(text)} />}
+                {this.state.showPopup && <LandingPopup onClick={(text) => this.onPopupClick(text)} onClose={this.onPopupClose} />}
                 {this.state.showThank && <LandingThank />}
             </div>
             </DocumentTitle>
