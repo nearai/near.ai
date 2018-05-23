@@ -44,13 +44,14 @@ class SiteIndex extends React.Component {
                     <p>No experience required.</p>
 
                     <table cellSpacing="0" cellPadding="0"><tbody>
-                            <tr><td><img src="1.svg" /></td><td><p> Upload your sketches, which will be rendered into designs</p></td></tr>
-                            <tr><td><img src="2.svg" /></td><td><p> Use simple language to describe what you want to build, our platform will handle the rest</p></td></tr>
-                            <tr><td><img src="3.svg" /></td><td><p> Launch a fully functioning mobile app using our proprietary technology</p></td></tr>
+                            <tr><td className='td_img'><img src="1.png" /></td><td><p> Upload your sketches, which will be rendered into designs</p></td></tr>
+                            <tr><td className='td_img'><img src="2.png" /></td><td><p> Use simple language to describe what you want to build, our platform will handle the rest</p></td></tr>
+                            <tr><td className='td_img'><img src="3.png" /></td><td><p> Launch a fully functioning mobile app using our proprietary technology</p></td></tr>
                     </tbody></table>
 
                         <form action="" method="post" id="" name="" className="validate" noValidate onSubmit={(event) => { this.onFormSubmit(event) }}>
                         <div>
+                            <br />
                             <label htmlFor="mce-EMAIL">Get early access</label><br />
                             <input type="email" name="EMAIL" className="email" placeholder="email address" required value={this.state.email} onChange={this.onChange} />
                             <input type="submit" value="Submit" name="Submit" id="subscribe" className="button" />

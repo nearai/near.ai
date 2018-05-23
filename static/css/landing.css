@@ -5,11 +5,17 @@ body, label, input {
 
 #text p {
   font-size: 18px;
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
 #landing h1, h2, h3, h4, h5, h6 {
   color: #3F51B5;
+}
+
+.close {
+    float: right;
+    margin-top: -50px;
+    margin-right: -100px;
 }
 
 #landing h1 {
@@ -23,10 +29,13 @@ body, label, input {
   vertical-align: top;
 }
 
+.td_img {
+  text-align: center;
+}
+
 #text img {
-  width: 45px;
-  height: 35px;
-  margin-right: 10px;
+  margin-right: 5px;
+  max-width: 45px;
 }
 
 #landing img {
@@ -105,8 +114,8 @@ input#subscribe {
 #popup textarea {
   margin-top: 20px;
   padding: 5px;
-  width: 70%;
-  height: 200px;
+  width: 90%;
+  height: 120px;
   font-size: 18px;
   border-color: #3F51B5;
 }
