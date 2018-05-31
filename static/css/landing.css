@@ -71,12 +71,20 @@ body, label, input {
   position: relative;
 }
 
-input[type="submit"] {
+.button {
   background-color: #3F51B5;
   padding: 6px 25px;
   text-align: center;
   border-style: none;
   border-radius: 3px;
+}
+
+.disabled {
+  background-color: #7F7F7F;
+}
+
+.email-error {
+  color: #9f0000;
 }
 
 input[type="email"] {

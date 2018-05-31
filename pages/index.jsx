@@ -11,14 +11,17 @@ import LandingThank from '../components/LandingThank'
 import request from 'superagent'
 
 const SERVER_URL = "http://app.near.ai/early_access"
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 class SiteIndex extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {showPopup: false, email: '', user_id: -1, showThank: false}
+        this.state = {showPopup: false, email: '', user_id: -1, showThank: false, validEmail: false}
     }
     onChange = (event) => {
-        this.setState({email: event.target.value})
+        console.log(validEmail)
+        const validEmail = emailRegex.test(event.target.value.toLowerCase());
+        this.setState({email: event.target.value, validEmail})
     }
     onFormSubmit = (event) => {
         event.preventDefault()
@@ -34,6 +37,9 @@ class SiteIndex extends React.Component {
     }
     onPopupClose = () => {
         this.setState({ showPopup: false })
+    }
+    onThankClose = () => {
+        this.setState({ showThank: false})
     }
     render() {
         return (
@@ -54,7 +60,9 @@ class SiteIndex extends React.Component {
                             <br />
                             <label htmlFor="mce-EMAIL">Get early access</label><br />
                             <input type="email" name="EMAIL" className="email" placeholder="email address" required value={this.state.email} onChange={this.onChange} />
-                            <input type="submit" value="Submit" name="Submit" id="subscribe" className="button" />
+                            <input type="submit" value="Submit" name="Submit" id="subscribe" className={`button ${this.state.validEmail ? "" : "disabled"}`} disabled={!this.state.validEmail} />
+                            <br />
+                            {this.state.email != '' && !this.state.validEmail && <span className="email-error">Enter a valid email</span>}
                         </div>
                     </form>
                 </div>
@@ -62,7 +70,7 @@ class SiteIndex extends React.Component {
                     <img src="mobile_app.svg" />
                 </div>
                 {this.state.showPopup && <LandingPopup onClick={(text) => this.onPopupClick(text)} onClose={this.onPopupClose} />}
-                {this.state.showThank && <LandingThank />}
+                {this.state.showThank && <LandingThank onClose={this.onThankClose} />}
             </div>
             </DocumentTitle>
         )

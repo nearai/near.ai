@@ -13,7 +13,6 @@ class LandingPopup extends React.Component {
         return (
             <div id="popupcontainer">
                 <div id="popup">
-                    
                     <div id="building"><img src="building_blocks.svg" /><p className="close" onClick={this.props.onClose}>X</p></div>
                     <h2>Hi! You caught us before we're ready.</h2>
 
