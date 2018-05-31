@@ -43,7 +43,7 @@ class LandingPage extends React.Component {
     }
     render() {
         const steps = this.props.steps.map((step) => (
-            <tr><td className='td_img'><img src={step.image} /></td><td><p>{step.text}</p></td></tr>
+            <tr key={step.image}><td className='td_img'><img src={step.image} /></td><td><p>{step.text}</p></td></tr>
         ))
         return (
             <div id="landing">
