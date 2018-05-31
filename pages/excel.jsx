@@ -8,7 +8,7 @@ import access from 'safe-access'
 import { config } from 'config'
 import LandingPage from '../components/LandingPage'
 
-class Optimize extends React.Component {
+class Excel extends React.Component {
     render() {
         const steps = [
             { image: "1.png", text: "Connect your existing online spreadsheet (Google, Excel etc)" },
@@ -23,8 +23,8 @@ class Optimize extends React.Component {
     }
 }
 
-Optimize.propTypes = {
+Excel.propTypes = {
     route: React.PropTypes.object,
 }
 
-export default Optimize
+export default Excel
