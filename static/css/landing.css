@@ -80,7 +80,7 @@ body, label, input {
 }
 
 .disabled {
-  background-color: #7F7F7F;
+  background-color: #3F51B5;
 }
 
 .email-error {
