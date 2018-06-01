@@ -17,7 +17,7 @@ class Optimize extends React.Component {
         ];
         return (
             <DocumentTitle title={ config.siteTitle }>
-                <LandingPage title="Engineer your life." subtitle="More efficiently organize your life." steps={steps} main_image="/mobile_app.svg" />
+                <LandingPage landingKey="optimize" title="Engineer your life." subtitle="More efficiently organize your life." steps={steps} main_image="/mobile_app.svg" />
             </DocumentTitle>
         )
     }

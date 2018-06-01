@@ -17,7 +17,7 @@ class SiteIndex extends React.Component {
         ];
         return (
             <DocumentTitle title={ config.siteTitle }>
-                <LandingPage title="Design and build a mobile app from scratch with NEAR." subtitle="No experience required." steps={steps} main_image="mobile_app.svg" />
+                <LandingPage key="app_builder" title="Design and build a mobile app from scratch with NEAR." subtitle="No experience required." steps={steps} main_image="mobile_app.svg" />
             </DocumentTitle>
         )
     }

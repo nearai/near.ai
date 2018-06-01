@@ -17,7 +17,7 @@ class Excel extends React.Component {
         ];
         return (
             <DocumentTitle title={ config.siteTitle }>
-                <LandingPage title="Make an app using data from your spreadsheets." subtitle="No code required." steps={steps} main_image="/spreadsheet.svg" />
+                <LandingPage landingKey="excel" title="Make an app using data from your spreadsheets." subtitle="No code required." steps={steps} main_image="/spreadsheet.svg" />
             </DocumentTitle>
         )
     }

@@ -17,7 +17,7 @@ class Integration extends React.Component {
         ];
         return (
             <DocumentTitle title={ config.siteTitle }>
-                <LandingPage title="Make your workflow smoother." subtitle="" steps={steps} main_image="/sync.svg" />
+                <LandingPage landingKey="integration" title="Make your workflow smoother." subtitle="" steps={steps} main_image="/sync.svg" />
             </DocumentTitle>
         )
     }

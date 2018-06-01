@@ -25,7 +25,7 @@ class LandingPage extends React.Component {
     }
     onFormSubmit = (event) => {
         event.preventDefault()
-        request.post(SERVER_URL).type('form').send({ email: this.state.email }).then((resp) => {
+        request.post(SERVER_URL).type('form').send({ email: this.state.email, landing_page: this.props.landingKey }).then((resp) => {
             const result = JSON.parse(resp.text)
             this.setState({ showPopup: true, user_id: result.id })
         })
