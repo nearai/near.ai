@@ -9,7 +9,7 @@ import 'static/scss/gatsrap.scss'
 import 'highlight.js'
 import { config } from 'config'
 import SiteNavi from '../components/SiteNavi'
-import Inspectlet from '../components/Inspectlet'
+// import Inspectlet from '../components/Inspectlet'
 
 
 class Template extends React.Component {
@@ -25,7 +25,7 @@ class Template extends React.Component {
     }
 
     componentDidMount() {
-        Inspectlet.initialize("1322037146")
+        // Inspectlet.initialize("1322037146")
         const WOW = require('wowjs');
         this.wow = new WOW.WOW()
         this.wow.init()
