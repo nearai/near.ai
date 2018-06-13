@@ -15,6 +15,7 @@ module.exports = React.createClass({
         const jquery = <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
         const tether = <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
         const bootstrap = <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>
+        const font = <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet" />
 
         let css
         if (process.env.NODE_ENV === 'production') {
@@ -31,6 +32,7 @@ module.exports = React.createClass({
                   { title }
                 </title>
                 { css }
+                { font }
                 { jquery }
                 { tether }
                 { bootstrap }

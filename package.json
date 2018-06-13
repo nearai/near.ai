@@ -23,13 +23,16 @@
   "license": "MIT",
   "dependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
     "classnames": "^2.2.5",
     "front-matter": "^2.1.2",
     "gatsby": "^0.12.48",
     "history": "^2.1.2",
+    "latest-version": "~3.1.0",
     "lodash": "^4.17.4",
     "markdown-it": "^6.1.1",
     "moment": "^2.18.1",
@@ -39,11 +42,11 @@
     "react-ga": "^2.2.0",
     "react-router": "^2.8.1",
     "require": "^2.4.20",
+    "rubik-font": "0.0.3",
     "safe-access": "^0.1.0",
     "superagent": "^3.8.3",
     "superagent-jsonp": "^0.2.1",
-    "underscore.string": "^3.3.4",
-    "latest-version": "~3.1.0"
+    "underscore.string": "^3.3.4"
   },
   "devDependencies": {
     "animate.css": "^3.5.2",
