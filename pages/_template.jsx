@@ -15,9 +15,10 @@ import SiteNavi from '../components/SiteNavi'
 class Template extends React.Component {
     render() {
         const {location, children} = this.props
+        console.log(location)
         return (
             <div>
-              <SiteNavi title={ config.siteTitle } {...this.props}/>
+              {location.pathname !== '/agency/' && <SiteNavi title={ config.siteTitle } {...this.props}/> }
               { children }
             </div>
         );

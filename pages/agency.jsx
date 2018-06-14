@@ -36,6 +36,12 @@ class Agency extends React.Component {
     onDetailsChange = (event) => this.setState({ details: event.target.value })
     render() {
         return (
+            <div>
+                <nav className="navbar sticky-top navbar-toggleable-sm navbar-inverse bg-primary">
+                    <div className="container justify-content-center">
+                        <Link className="text-center" to={prefixLink('/')}><h1 className="navbar-brand mb-0">NEAR</h1></Link>
+                    </div>
+                </nav>
             <DocumentTitle title="Develop an app without headaches - NEAR">
                 <div id="agency-landing">
                     <div className="jumbatron">
@@ -82,6 +88,7 @@ class Agency extends React.Component {
                     </div>
                 </div>
             </DocumentTitle>
+            </div>
         )
     }
 }
