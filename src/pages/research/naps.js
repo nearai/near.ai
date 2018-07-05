@@ -28,7 +28,7 @@ const Index = ({ location }) => (
                                 <td>
                                     Seq2Tree 
                                     <p className="institution">NEAR.ai</p>
-                                    <a href="http://arxiv.org/">(Zavershynskyi et al. '18)</a>
+                                    <a href="https://openreview.net/forum?id=Bkg-jr81e7">(Zavershynskyi et al. '18)</a>
                                 </td>
                                 <td><b>8.8</b></td><td><b>11.2</b></td>
                             </tr>

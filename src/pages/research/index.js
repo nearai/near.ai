@@ -15,8 +15,8 @@ const Index = ({ location }) => (
                         <p><b>Authors:</b> <span className="text-muted">M. Zavershynskyi, A. Skidanov, I. Polosukhin</span></p>
                     </header>
                     <footer>
-                        <a href="https://openreview.net/forum?id=B1iZRFkwz" className="px-2"> > View publication</a>
-                        <a href="https://openreview.net/pdf?id=B1iZRFkwz" className="px-2"> > Download publication</a>
+                        <a href="https://openreview.net/forum?id=Bkg-jr81e7" className="px-2"> > View publication</a>
+                        <a href="https://openreview.net/forum?id=Bkg-jr81e7" className="px-2"> > Download publication</a>
                         <Link to="/research/naps" className="px-2"> > Dataset & Leaderboard</Link>
                     </footer>
                 </div>
