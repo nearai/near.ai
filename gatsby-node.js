@@ -1,23 +1,16 @@
-var rucksack = require('rucksack-css')
-var lost = require("lost")
-var cssnext = require("postcss-cssnext")
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
 
-exports.modifyWebpackConfig = function(config, env) {
-    config.merge({
-        target: 'web',
-        postcss: [
-            lost(),
-            rucksack(),
-            cssnext({
-                browsers: ['>1%', 'last 2 versions']
-            })
-        ]
+exports.createPages = ({ actions, graphql }) => {
+    const { createRedirect } = actions
+
+    createRedirect({
+        fromPath: `/publications`,
+        isPermanent: true,
+        redirectInBrowser: true,
+        toPath: `/research`,
     })
-
-    config.loader('svg', {
-       test: /\.(svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-       loader: 'file-loader',
-    })
-
-    return config
-};
+}

@@ -1,6 +1,6 @@
 # NEAR.AI Website
 
-Install dependencies with `npm install`
+Install dependencies with `npm install` and also install CLI for gatsby `sudo npm install -g gatsby-cli`.
 
 To develop: `gatsby develop`
 

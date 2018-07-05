@@ -1,0 +1,8 @@
+module.exports = {
+  siteMetadata: {
+    title: 'NEAR',
+    description: 'Teaching Machines To Code',
+    keywords: 'program synthesis, deep learning, machine learning, app builder, mobile app builder, no code, automatic programming'
+  },
+  plugins: ['gatsby-plugin-react-helmet'],
+}
