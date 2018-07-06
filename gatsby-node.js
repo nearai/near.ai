@@ -13,4 +13,11 @@ exports.createPages = ({ actions, graphql }) => {
         redirectInBrowser: true,
         toPath: `/research`,
     })
+
+    createRedirect({
+        fromPath: `/publications/`,
+        isPermanent: true,
+        redirectInBrowser: true,
+        toPath: `/research`,
+    })
 }
