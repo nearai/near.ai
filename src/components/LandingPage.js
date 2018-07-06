@@ -1,10 +1,11 @@
 import React from 'react'
 import LandingPopup from './LandingPopup'
 import LandingThank from './LandingThank'
-import request from 'superagent'
 
 const SERVER_URL = "https://app.near.ai/early_access"
 const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+const serialize = (obj) => (Object.entries(obj).map(i => [i[0], encodeURIComponent(i[1])].join('=')).join('&'))
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -17,13 +18,25 @@ class LandingPage extends React.Component {
     }
     onFormSubmit = (event) => {
         event.preventDefault()
-        request.post(SERVER_URL).type('form').send({ email: this.state.email, landing_page: this.props.landingKey }).then((resp) => {
-            const result = JSON.parse(resp.text)
+        fetch(SERVER_URL, {
+            method: 'post',
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            body: serialize({ email: this.state.email, landing_page: this.props.landingKey })
+        }).then((resp) => {
+            const result = resp.json()
             this.setState({ showPopup: true, user_id: result.id })
         })
     }
     onPopupClick = (text) => {
-        request.post(SERVER_URL).type('form').send({ id: this.state.user_id, usecase: text }).then((resp) => {
+        fetch(SERVER_URL, {
+            method: 'post',
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            body: serialize({ id: this.state.user_id, usecase: text })
+        }).then((resp) => {
             this.setState({ showPopup: false, user_id: -1, email: "", showThank: true })
         })
     }

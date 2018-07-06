@@ -13,13 +13,13 @@ const Header = ({ siteTitle, location }) => (
         <li className='nav-item'>
           <a href='https://medium.com/near-ai' className="nav-link">Blog</a>
         </li>
-        <li className={location.pathname.startsWith('/research') ? 'nav-item active' : 'nav-item'}>
+        <li className={location && location.pathname.startsWith('/research') ? 'nav-item active' : 'nav-item'}>
           <Link to={'/research'} className="nav-link">Research</Link>
         </li>
-        <li className={location.pathname === '/about' ? 'nav-item active' : 'nav-item'}>
+        <li className={location && location.pathname === '/about' ? 'nav-item active' : 'nav-item'}>
           <Link to={'/about'} className="nav-link">About</Link>
         </li>
-        <li className={location.pathname.startsWith('/careers') ? 'nav-item active' : 'nav-item'}>
+        <li className={location && location.pathname.startsWith('/careers') ? 'nav-item active' : 'nav-item'}>
           <Link to={'/careers'} className="nav-link">Careers</Link>
         </li>
       </ul>

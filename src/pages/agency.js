@@ -1,5 +1,4 @@
 import React from 'react'
-import request from 'superagent'
 
 import Layout from '../components/layout'
 import gears from '../images/icons-8-gears-64.png'
@@ -7,6 +6,8 @@ import average from '../images/icons-8-average-2-64.png'
 import timer from '../images/icons-8-timer-64.png'
 
 const SERVER_URL = 'https://app.near.ai/agency_quote'
+
+const serialize = (obj) => (Object.entries(obj).map(i => [i[0], encodeURIComponent(i[1])].join('=')).join('&'))
 
 class Agency extends React.Component {
     constructor(props) {
@@ -17,12 +18,18 @@ class Agency extends React.Component {
         window.scrollTo(0, this.quote.offsetTop)
     }
     onSubmit = (event) => {
-        request.post(SERVER_URL).type('form').send({
-            name: this.state.name,
-            email: this.state.email,
-            company: this.state.company,
-            phone: this.state.phone,
-            details: this.state.details,
+        fetch(SERVER_URL, {
+            method: 'post',
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            body: serialize({
+                name: this.state.name,
+                email: this.state.email,
+                company: this.state.company,
+                phone: this.state.phone,
+                details: this.state.details,                
+            })
         }).then(() => {
             window.location = '/'
         })
