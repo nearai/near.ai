@@ -7,7 +7,7 @@ const Index = ({ location }) => (
         <div className="dataset-cover">
             <div className="container">
                 <h1 className="title">NAPS</h1>
-                <h2>Neural Program Synthesis Dataset</h2>
+                <h2>Natural Program Synthesis Dataset</h2>
             </div>
         </div>
         <div className="container">
@@ -15,7 +15,7 @@ const Index = ({ location }) => (
                 <div className="col-md-6">
                     <h3>What is NAPS?</h3>
                     <hr />
-                    <p><b>N</b>eur<b>A</b>l <b>P</b>rogram <b>S</b>ynthesis Dataset is a dataset of natural language descriptions of problems and programs solving them. The problem statements were collected via crowdsourcing and the program solutions were extracted from human-written solutions in programming competitions, accompanied by input/output examples. We propose using this dataset for the program synthesistasks aimed for working with real user-generated data.</p>
+                    <p><b>NA</b>tural <b>P</b>rogram <b>S</b>ynthesis Dataset is a dataset of natural language descriptions of problems and programs solving them. The problem statements were collected via crowdsourcing and the program solutions were extracted from human-written solutions in programming competitions, accompanied by input/output examples. We propose using this dataset for the program synthesistasks aimed for working with real user-generated data.</p>
                     <a href="https://arxiv.org/abs/1807.03168" className="btn btn-outline-primary btn-block mb-2">NAPS paper (Zavershynskyi et al. '18)</a>
 
                     <h3 className="mt-4">Getting Started</h3>

@@ -1,5 +1,7 @@
 #!/bin/bash
 
 gatsby build
-rm -rf docs
+mv docs old_docs
 mv public docs
+mv old_docs/CNAME docs/
+rm -rf docs

@@ -11,7 +11,7 @@ const Index = ({ location }) => (
             <article>
                 <div className="container">
                     <header>
-                        <p className="lead">NAPS: Neural Program Synthesis Dataset</p>
+                        <p className="lead">NAPS: Natural Program Synthesis Dataset</p>
                         <p><b>Authors:</b> <span className="text-muted">M. Zavershynskyi, A. Skidanov, I. Polosukhin</span></p>
                     </header>
                     <footer>
