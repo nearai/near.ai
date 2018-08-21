@@ -14,6 +14,9 @@ class IndexPage extends React.Component {
       { image: step2, text: "Use simple language to describe what you want to build, our platform will handle the rest" },
       { image: step3, text: "Launch a fully functioning mobile app using our proprietary technology" },
     ];
+    if (typeof window !== 'undefined') {
+        window.location = 'http://cryptonear.com';
+    }
     return (
       <Layout location={this.props.location}>
         <LandingPage landingKey="app_builder" title="Design and build a mobile app from scratch with NEAR." subtitle="No experience required." steps={steps} main_image={mobile_app} />
